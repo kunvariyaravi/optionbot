@@ -1,0 +1,14 @@
+# Render Blueprint — free web service. New → Blueprint → select repo.
+services:
+  - type: web
+    name: optionbot
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ENV
+        value: production
+      - key: MAX_DAILY_LOSS
+        value: 5000
+      - key: MAX_POSITION_QTY
+        value: 200
